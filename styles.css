@@ -214,7 +214,7 @@ main {
 #home .container {
   padding: 0 2.8rem;
   display: grid;
-  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-rows: 4fr 1fr 1fr;
   grid-template-areas:
     '.'
     'text';
@@ -237,7 +237,7 @@ main {
 
 .bg2 {
   width: 100%;
-  background-image: url('/assets/midia-social.png');
+  background-image: url('assets/midia-social.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
