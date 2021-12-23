@@ -1,0 +1,110 @@
+.section {
+  height: 18rem;
+}
+
+.heading {
+  padding-top: 11rem;
+  padding-left: 2.8rem;
+  font-size: 3.8rem;
+}
+
+.w-row {
+  padding: 2.8rem 2.8rem 0 2.8rem;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.paragraph {
+  padding-top: 1rem;
+}
+
+.text-block {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ==== CONTACT ================== */
+
+#contact .container {
+  margin: 0;
+  width: 100%;
+  height: 66.3rem;
+
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    'h1'
+    'links';
+}
+
+#contact h1 {
+  font-size: 3.2rem;
+  grid-area: h1;
+  background: var(--light);
+  color: var(--dark);
+  padding: 12rem 0 2.8rem 2.8rem;
+  font-size: 3.2rem;
+}
+
+#contact .links {
+  padding: 2.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact .links a {
+  font-size: 2.8rem;
+  color: var(--text);
+}
+
+#contact .footer {
+  padding: 0 0 2.8rem 2.8rem;
+}
+
+#contact .footer p {
+  padding-bottom: 1.8rem;
+}
+
+/* ==== MEDIA QUERIES =========================== */
+
+@media (min-width: 900px) {
+  .heading {
+    padding-left: 15rem;
+    font-size: 3.8rem;
+  }
+
+  .w-row {
+    display: flex;
+    padding: 2.8rem 15rem 0 15rem;
+  }
+
+  .w-col-2 {
+    width: 30%;
+  }
+
+  .w-col-4 {
+    width: 30%;
+  }
+
+  .w-col-8 {
+    width: 70%;
+  }
+
+  /* ==== CONTACT ================= */
+  #contact h1 {
+    padding-left: 15rem;
+    font-size: 5rem;
+  }
+
+  #contact .links {
+    padding: 2.8rem 15rem 0 15rem;
+  }
+
+  #contact .links a {
+    font-size: 3.8rem;
+  }
+
+  #contact .footer {
+    padding: 0 15rem 2.8rem 15rem;
+  }
+}
