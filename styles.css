@@ -204,6 +204,7 @@ main {
 
 .bg1 {
   width: 100%;
+  height: 100vh;
   background-image: url('assets/background.svg');
   background-position: center top;
   background-repeat: no-repeat;
@@ -218,7 +219,7 @@ main {
 #home .container {
   padding: 0 2.8rem;
   display: grid;
-  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-rows: 5fr 1fr 1fr;
   grid-template-areas:
     '.'
     'text';
@@ -265,10 +266,12 @@ main {
 
 .portfolio .container {
   margin: 0;
-  height: 66.3rem;
+  height: 72rem;
   display: grid;
   grid-template-rows: 4fr 2fr;
-  grid-template-areas: '.' 'text';
+  grid-template-areas:
+    '.'
+    'text';
 }
 
 .portfolio .text {
@@ -398,7 +401,7 @@ main {
   }
 
   /* ==== PORTFOLIO ================= */
-  #portfolio .text {
+  .portfolio .text {
     padding-left: 15rem;
   }
 }

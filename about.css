@@ -23,6 +23,14 @@
   color: var(--dark);
 }
 
+.habilities {
+  display: flex;
+}
+
+.col-2 {
+  width: 40%;
+}
+
 .paragraph {
   padding-top: 1rem;
   font-family: var(--body-font);
