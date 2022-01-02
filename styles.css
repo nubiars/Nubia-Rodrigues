@@ -45,7 +45,7 @@ body {
   display: flex;
   height: 100vh;
   color: var(--text);
-  background: var(--dark);
+  background: var(--base);
   font: 400 1.6rem var(--title-font);
 }
 
@@ -70,11 +70,6 @@ body::-webkit-scrollbar-thumb {
   -webkit-font-smoothing: auto;
 }
 
-/* .container {
-  margin-left: 2.8rem;
-  margin-right: 2.8rem;
-} */
-
 .grid {
   display: grid;
   gap: 3.2rem;
@@ -84,13 +79,11 @@ body::-webkit-scrollbar-thumb {
 
 #header {
   display: flex;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
-  background: rgba(88, 44, 131, 0.8);
-  backdrop-filter: saturate(180%) blur(10px);
 }
 
 header img {
@@ -198,12 +191,21 @@ main {
   width: 100%;
 }
 
+.animate {
+  animation-duration: 0.75s;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+
 /* ==== HOME ================= */
 
 .bg1 {
   width: 100%;
   background-image: url('assets/background.svg');
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -220,6 +222,21 @@ main {
   grid-template-areas:
     '.'
     'text';
+}
+
+.animate.blur {
+  animation-name: animate-blur;
+  animation-timing-function: ease;
+}
+@keyframes animate-blur {
+  0% {
+    opacity: 0;
+    filter: blur(15px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 
 #home .text {
@@ -246,7 +263,7 @@ main {
   background-attachment: fixed;
 }
 
-#portfolio .container {
+.portfolio .container {
   margin: 0;
   height: 66.3rem;
   display: grid;
@@ -254,18 +271,19 @@ main {
   grid-template-areas: '.' 'text';
 }
 
-#portfolio .text {
+.portfolio .text {
   grid-area: text;
   padding-left: 2.8rem;
   padding-top: 2.8rem;
   background: hsla(271, 51%, 10%, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
 }
 
-#portfolio .text h1 {
+.portfolio .text h1 {
   font-size: 3.2rem;
 }
 
-#portfolio .text a {
+.portfolio .text a {
   font-size: 2rem;
   color: var(--text);
 }
@@ -279,30 +297,6 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-
-#portfolio-2 .container {
-  margin: 0;
-  height: 66.3rem;
-  display: grid;
-  grid-template-rows: 4fr 2fr;
-  grid-template-areas: '.' 'text';
-}
-
-#portfolio-2 .text {
-  grid-area: text;
-  padding-left: 2.8rem;
-  padding-top: 2.8rem;
-  background: hsla(271, 51%, 10%, 0.8);
-}
-
-#portfolio-2 .text h1 {
-  font-size: 3.2rem;
-}
-
-#portfolio-2 .text a {
-  font-size: 2rem;
-  color: var(--text);
 }
 
 /* ===== BACK TO TOP ============= */

@@ -25,6 +25,16 @@ function backToTop() {
   }
 }
 
+const headingHidden = document.querySelector('#heading')
+
+function hiddenHeading() {
+  if (window.scrollY >= 200) {
+    headingHidden.classList.add('hidden')
+  } else {
+    headingHidden.classList.remove('hidden')
+  }
+}
+
 window.addEventListener('scroll', function () {
-  backToTop()
+  backToTop(), hiddenHeading()
 })

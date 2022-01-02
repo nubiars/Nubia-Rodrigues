@@ -2,13 +2,22 @@
   height: 18rem;
 }
 
-.heading {
+#heading {
   padding-top: 11rem;
   padding-left: 2.8rem;
   font-size: 3.8rem;
+  position: fixed;
+  z-index: 0;
 }
 
-.w-row {
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.row {
+  z-index: 2;
+  position: sticky;
   padding: 2.8rem 2.8rem 0 2.8rem;
   background: var(--light);
   color: var(--dark);
@@ -16,10 +25,12 @@
 
 .paragraph {
   padding-top: 1rem;
+  font-family: var(--body-font);
 }
 
 .text-block {
   font-size: 1.8rem;
+  font-family: var(--body-font);
   font-weight: 700;
 }
 
@@ -55,6 +66,11 @@
 #contact .links a {
   font-size: 2.8rem;
   color: var(--text);
+  transition: 0.3s;
+}
+
+#contact .links a:hover {
+  transform: translateY(-8px);
 }
 
 #contact .footer {
@@ -68,25 +84,25 @@
 /* ==== MEDIA QUERIES =========================== */
 
 @media (min-width: 900px) {
-  .heading {
+  #heading {
     padding-left: 15rem;
     font-size: 3.8rem;
   }
 
-  .w-row {
+  .row {
     display: flex;
     padding: 2.8rem 15rem 0 15rem;
   }
 
-  .w-col-2 {
+  .col-2 {
     width: 30%;
   }
 
-  .w-col-4 {
+  .col-4 {
     width: 30%;
   }
 
-  .w-col-8 {
+  .col-8 {
     width: 70%;
   }
 
